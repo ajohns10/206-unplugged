@@ -108,7 +108,7 @@ header, footer {
 /* Header Styles */
 
 header {
-
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -116,6 +116,8 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width:
+  margin: 0;
 }
 
 header figure {
@@ -123,7 +125,7 @@ header figure {
 }
 
 .header-divider {
-
+  width: 100%;
 }
 
 header nav {
@@ -131,13 +133,14 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-
+  width: 60%;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 45%;
 }
 
 /* ---------- Mobile Styles - Homepage ---------- */
@@ -164,11 +167,17 @@ aside {
   flex-flow: row wrap;
 }
 
-features .features-items {
+.features article {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 55%;
+  padding: 10px 0;
+}
+
+.features p {
+  margin: 0;
 }
 
 .reviews {
@@ -177,6 +186,28 @@ features .features-items {
   align-items: center;
   flex-flow: row wrap;
 }
+
+.reviews h3 {
+  width: 50%;
+}
+
+/* ---------- Mobile Styles - FAQ page ---------- */
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+main .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+} /* End of FAQ page styles */
+
+/* ---------- Mobile Styles - About page ---------- */
 
 .mission {
   display: flex;
@@ -190,23 +221,14 @@ features .features-items {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-}
-
-.faq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-faq .content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
+} /* End of About page styles */
 
 /* Footer */
+
+footer .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
+}
 
 footer .social {
   display: flex;
@@ -220,7 +242,9 @@ footer .social-icons {
   align-items: center;
 }
 
-
+footer p {
+  margin: 0;
+}
 
 /* ==========================================================================
    Helper classes
