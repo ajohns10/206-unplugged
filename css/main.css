@@ -140,11 +140,11 @@ p {
 }
 
 img {
-  width: 100%;
+
 }
 
 figure {
-
+  
 }
 
 address {
@@ -247,6 +247,8 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url('../img/jake-melara-unsplash.jpg') center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -293,6 +295,8 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/rawpixel-unsplash.jpg') center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
