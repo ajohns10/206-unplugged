@@ -179,6 +179,14 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .header-divider {
   background: #3a3a3a;
   width: 100%;
@@ -249,6 +257,7 @@ footer .copyright {
 .hero-area {
   background: url('../img/jake-melara-unsplash.jpg') center no-repeat;
   background-size: cover;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -506,6 +515,10 @@ input[type=button] {
     justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header nav {
     width: 20%;
   }
@@ -628,6 +641,18 @@ input[type=button] {
 .content-wrapper {
   max-width: 960px;
 }
+h2 {
+  font-size: 2.25em; /* 36px */
+}
+
+h3, h4 {
+    font-size: 1.875em; /* 30px */
+}
+
+p {
+    font-size: 1.125em; /* 18px */
+    line-height: 1.333;
+}
 
 /* ---------- Desktop Styles - Home page ---------- */
 
@@ -635,6 +660,7 @@ input[type=button] {
 
 .hero-area h1 {
   width: 60%;
+  font-size: 3.75em; /* 60px */
 }
 
 /* Aside */
