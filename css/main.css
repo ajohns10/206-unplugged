@@ -113,6 +113,8 @@ body {
 
 ul, ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -198,6 +200,7 @@ header nav {
   width: 60%;
   font-size: 1.125em; /* 18px*/
   font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -228,6 +231,10 @@ footer p {
 footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
 }
 
 footer .contact {
@@ -243,6 +250,7 @@ footer .social-icons {
 footer .social-icons p {
   background-color: #527158;
   border-radius: 50%;
+  /*margin-left: 10px;*/
   width: 40px;
   height: 40px;
   display: flex;
@@ -291,6 +299,7 @@ aside .form {
 input[type=text] {
   box-sizing: border-box;
   width: 100%;
+  padding: 20px 0; /* I ADDED!!! */
   color: #2a423a;
   font-style: italic;
 }
@@ -331,7 +340,7 @@ input[type=button] {
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* I changed from center to flex-start */
   flex-flow: row wrap;
 }
 
@@ -533,6 +542,16 @@ input[type=button] {
     margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em; /* 36px */
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em; /* 24px */
+    line-height: 1.25;
+  }
+
 /* Header */
 
   header {
@@ -559,37 +578,79 @@ input[type=button] {
   .header-divider {
     display: none;
   }
+footer .contact {
+  width: 70%;
+}
+
+footer .footer-content address {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+footer .social  {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+footer .social-icons {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: nowrap;
+}
+
 
 /* ---------- Tablet Styles - Home page ---------- */
 
-  /* Hero Area */
+/* Hero Area */
 
-  /* Aside */
+.hero-area h1 {
+  font-size: 3em; /* 48px */
+  line-height: 1;
+  margin: 0;
+}
 
-  aside .content-wrapper {
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
+/* Aside */
 
-  aside .content-wrapper .form-description, aside .content-wrapper .form {
-    width: 35%;
-    margin: 0;
+aside .content-wrapper {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+aside .content-wrapper .form-description, aside .content-wrapper .form {
+  width: 35%;
+  margin: 0;
 }
 
 /* Features */
 
-  .features article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    flex-basis: 50%;
-  }
+.features h2 {
+  margin: 0 20px 20px 0;
+}
+
+.features article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  flex-basis: 50%;
+}
 
 .features .features-item-description {
   width: 50%;
+}
+
+.features i {
+  margin-bottom: 30px;
 }
 
 /* Reviews */
@@ -599,8 +660,17 @@ input[type=button] {
   justify-content: space-between;
 }
 
-.reviews article div {
+.reviews h2 {
+  width: 90%;
+}
+
+.reviews article div, article div {
   width: 49%;
+}
+
+.reviews h3 {
+  width: 75%;
+  margin: 0;
 }
 
 /* Footer */
@@ -610,14 +680,30 @@ input[type=button] {
     margin: 100px 0;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   footer .contact {
     margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.5em; /* 24px */
+    margin-bottom: 40px;
+    text-align: right;
+  }
+
+  footer p {
+    line-height: 1.285;
+  }
+
+  footer .social-icons {
+    width: 12.5em;/* 200px */
+    justify-content: space-between;
   }
 
   footer .copyright {
@@ -638,6 +724,10 @@ input[type=button] {
     width: 100%;
   }
 
+  .faq-content h4, p {
+    font-size: .875em; /* 14px*/
+    line-height: 1.125;
+  }
 
   /* ---------- Tablet Styles - About page ---------- */
 
@@ -665,6 +755,9 @@ input[type=button] {
     align-items: flex-start;
   }
 
+.contact-content h4 {
+  font-size: 1.5em; /* 24px */
+}
 
 /* MONITOR/DESKTOP STYLES LARGER THAN 1200PX */
 @media only screen and (min-width: 1200px) {
@@ -693,7 +786,7 @@ p {
 
 .hero-area h1 {
   width: 60%;
-  font-size: 3.75em; /* 60px */
+  font-size: 3em; /* 48px */ /* THE ORIGINAL WAS THIS...font-size: 3.75em; /* 60px */
 }
 
 /* Aside */
@@ -704,6 +797,10 @@ aside .content-wrapper {
 
 aside .content-wrapper .form-description, aside .content-wrapper .form {
   width: 30%;
+}
+
+.form-description p {
+  font-size: 1.125em; /* 18px */
 }
 
 /* Features */
@@ -719,23 +816,30 @@ aside .content-wrapper .form-description, aside .content-wrapper .form {
 /* Reviews */
 
 .reviews article div {
-  width: 42%;
+  width: 45%;
 }
 
 /* ---------- Desktop Styles - FAQ page ---------- */
 
 .faq h2 {
   width: 100%;
+  font-size: 3em; /* 48px */
 }
 
 .faq-content {
   flex-basis: 35%;
 }
 
+.faq h4, .faq p {
+  font-size: 1.125em; /* 18px */
+  line-height: 1;
+}
+
 /* ---------- Desktop Styles - About page ---------- */
 
 .mission h2, .contact-section .content-wrapper h2 {
-      width: 100%;
+    width: 100%;
+    font-size: 3em; /* 48px */
   }
 
 .map figure {
@@ -747,6 +851,8 @@ aside .content-wrapper .form-description, aside .content-wrapper .form {
     margin-bottom: 40px;
   }
 
+.contact-content h4 {
+  font-size: 1.875em; /* 30px */
 }
 
 /* ==========================================================================
